@@ -19,6 +19,7 @@ public class Testb {
 
         private final static Logger logger = LoggerFactory.getLogger(Testb.class);
 
+        @SuppressWarnings("deprecation")
         public static void main(String[] args) {
 
                 Flux<String> input = Flux
@@ -28,7 +29,7 @@ public class Testb {
                                 .delayElements(Duration.ofSeconds(1));
 
                 WebSocketClient client = new ReactorNettyWebSocketClient();
-                
+
                 EmitterProcessor<String> output = EmitterProcessor.create();
 
                 Mono<Void> sessionMono = client.execute(URI.create("ws://localhost:8080/climateData"),

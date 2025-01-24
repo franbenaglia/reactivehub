@@ -14,7 +14,6 @@ chrome-extension://fgponpodhbmadfljofbimhhlengambbn/index.html
 
 @SpringBootApplication
 public class ReactivehubApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(ReactivehubApplication.class, args);
 	}
