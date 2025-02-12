@@ -3,6 +3,8 @@ package com.fab.reactivehub;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 /*
  
 https://prateek-ashtikar512.medium.com/spring-webflux-websocket-f9b451d6ffee
@@ -12,7 +14,9 @@ https://msmechatronics.medium.com/websocket-wizardry-spring-webflux-edition-ca9d
 chrome-extension://fgponpodhbmadfljofbimhhlengambbn/index.html
  */
 
-@SpringBootApplication
+ @EnableDiscoveryClient
+ @SpringBootApplication
+ //@EnableFeignClients
 public class ReactivehubApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ReactivehubApplication.class, args);
